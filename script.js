@@ -34,8 +34,75 @@ function efectoHabilidades(){
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const intereses = document.querySelectorAll(".interes");
+
+  intereses.forEach(interes => {
+    const audio = interes.querySelector("audio");
+
+    interes.addEventListener("mouseover", function() {
+      // Detener cualquier audio que esté reproduciéndose
+      document.querySelectorAll("audio").forEach(a => {
+        if (a !== audio) {
+          a.pause();
+          a.currentTime = 0;
+        }
+      });
+
+      // Reproducir el audio correspondiente
+      audio.play();
+    });
+
+    interes.addEventListener("mouseout", function() {
+      // Detener el audio cuando el mouse sale del área del ícono
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  });
+});
+
+
 
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const desc = btn.nextElementSibling;
+    const isVisible = desc.style.display === 'block';
+    desc.style.display = isVisible ? 'none' : 'block';
+    btn.textContent = isVisible ? 'Ver más' : 'Ocultar';
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const intereses = document.querySelectorAll(".interes");
+
+  intereses.forEach(interes => {
+    const audio = interes.querySelector("audio");
+
+    interes.addEventListener("mouseover", function() {
+      // Detener cualquier audio que esté reproduciéndose
+      document.querySelectorAll("audio").forEach(a => {
+        if (a !== audio) {
+          a.pause();
+          a.currentTime = 0;
+        }
+      });
+
+      // Reproducir el audio correspondiente
+      audio.currentTime = 0; // Reinicia el audio
+      audio.play();
+    });
+
+    interes.addEventListener("mouseout", function() {
+      // Detener el audio cuando el mouse sale del área del ícono
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  });
+});
+
