@@ -590,7 +590,7 @@ html{
     top: 40%;
     background-color: #252A2E;
     padding: 20px;
-    max-swidth: 350px;
+    max-width: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -1165,3 +1165,129 @@ input[type="radio"] {
     transition: opacity 0.3s ease;
   }
   
+
+
+.curriculum {
+  padding: 60px 20px;
+  background: rgba(20, 20, 20, 0.75);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-left: 4px solid #363739;
+  max-width: 900px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -11px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background: rgba(28,182,152,.8);
+  border-radius: 50%;
+  border: 3px solid rgba(28,182,152,.8);
+  box-shadow: 0 0 0 2px white ;
+}
+
+.timeline-content {
+  margin-left: 30px;
+}
+
+.card {
+  background: #37383a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-header img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.casa {
+  display: block;
+  color: white;
+  font-weight: bold;
+}
+
+.fecha {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.card-body {
+  margin-top: 10px;
+}
+
+.toggle-btn {
+  background: rgba(28,182,152,.8);
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-header img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@keyframes flotante {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.flotante {
+  animation: flotante 2s ease-in infinite;
+}
+
+
+
